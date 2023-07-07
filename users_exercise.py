@@ -54,35 +54,35 @@ users = {
   }
 }
 
-# # 1. Get Jonathan's Twitter handle (i.e. the string `"jonnyt"`)
-# print(users["Jonathan"]["twitter"])
-# # 2. Get Erik's hometown
-# print(users["Erik"]["home_town"])
-# # 3. Get the list of Erik's lottery numbers
+# 1. Get Jonathan's Twitter handle (i.e. the string `"jonnyt"`)
+print(users["Jonathan"]["twitter"])
+# 2. Get Erik's hometown
+print(users["Erik"]["home_town"])
+# 3. Get the list of Erik's lottery numbers
 erik_lottery = users["Erik"]["lottery_numbers"]
 print(erik_lottery)
-# # 4. Get the species of Avril's pet Monty
-# print(users["Avril"]["pets"][0]["species"])
-# # 5. Get the smallest of Erik's lottery numbers
-# erik_lottery = users["Erik"]["lottery_numbers"]
-# for min_number in erik_lottery:
-#     min_numebr = erik_lottery[0]
-#     for a in erik_lottery:
-#         if a < min_numebr:
-#             min_numebr = a
-# print(min_numebr)
+# 4. Get the species of Avril's pet Monty
+print(users["Avril"]["pets"][0]["species"])
+# 5. Get the smallest of Erik's lottery numbers
+erik_lottery = users["Erik"]["lottery_numbers"]
+for min_number in erik_lottery:
+    min_numebr = erik_lottery[0]
+    for a in erik_lottery:
+        if a < min_numebr:
+            min_numebr = a
+print(min_numebr)
 
 
-# # 6. Return an list of Avril's lottery numbers that are even
-# avril_lottery_number = users["Avril"]["lottery_numbers"]
-# avril_even_lottery_number = []
-# for i in avril_lottery_number:
-#     if i % 2 == 0:
-#         avril_even_lottery_number.append(i)
-# print(avril_even_lottery_number)
+# 6. Return an list of Avril's lottery numbers that are even
+avril_lottery_number = users["Avril"]["lottery_numbers"]
+avril_even_lottery_number = []
+for i in avril_lottery_number:
+    if i % 2 == 0:
+        avril_even_lottery_number.append(i)
+print(avril_even_lottery_number)
 
 # 7. Erik is one lottery number short! Add the number `7` to be included in his lottery numbers
-erik_lottery.append([7])
+erik_lottery.append(7)
 print(erik_lottery)
 # 8. Change Erik's hometown to Edinburgh
 users["Erik"]["home_town"] = "Edinburgh"
