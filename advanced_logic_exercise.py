@@ -20,12 +20,12 @@ numbers = [1, 6, 2, 2, 7, 1, 6, 13, 99, 7]
 #     for i in range(len(numbers) - 1):
 #         if numbers[i] == numbers[i + 1]:
 #             return True
-# def find_two(numbers):
-#     for i in range(len(numbers) - 1):
-#         if numbers[i] == numbers[i + 1] and numbers[i] == 2:
-#             return True
+def find_two(list):
+    for i in range(len(list) - 1):
+        if list[i] == list[i + 1] and list[i] == 2:
+            return True
 
-# print(find_two(numbers))
+print(find_two(numbers))
 
 
 
@@ -34,21 +34,21 @@ numbers = [1, 6, 2, 2, 7, 1, 6, 13, 99, 7]
 #    BUT ignore any section of numbers starting with a 6 and extending to the next 7.
 #    
 #    So [11, 6, 4, 99, 7, 11] would have sum of 22
-def sum_without_six_untill_seven(list):
-    sum = 0
-    ignore_number = False
+# def sum_without_six_untill_seven(list):
+#     sum = 0
+#     ignore_number = False
 
-    for number in list:
-        if str(number).startswith("6"):
-            ignore_number = True
-            continue
+#     for number in list:
+#         if str(number).startswith("6"):
+#             ignore_number = True
+#             continue
         
-        elif number == 7:
-            ignore_number = True
-        else:
-            sum += number
+#         elif number == 7:
+#             ignore_number = True
+#         else:
+#             sum += number
 
-print(sum_without_six_untill_seven(numbers))
+# print(sum_without_six_untill_seven(numbers))
 
             
 
