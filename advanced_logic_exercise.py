@@ -20,6 +20,7 @@ numbers = [1, 6, 2, 2, 7, 1, 6, 13, 99, 7]
 #     for i in range(len(numbers) - 1):
 #         if numbers[i] == numbers[i + 1]:
 #             return True
+
 # def find_two(list):
 #     for i in range(len(list) - 1):
 #         if list[i] == list[i + 1] and list[i] == 2:
@@ -34,26 +35,24 @@ numbers = [1, 6, 2, 2, 7, 1, 6, 13, 99, 7]
 #    BUT ignore any section of numbers starting with a 6 and extending to the next 7.
 #    
 #    So [11, 6, 4, 99, 7, 11] would have sum of 22
-# def sum_without_six_untill_seven(list):
-#     sum = 0
-#     ignore_number = False
 
-#     for number in list:
-#         if str(number).startswith("6"):
-#             ignore_number = True
-#             continue
-        
-#         elif number == 7:
-#             ignore_number = True
-#             continue
-#         else:
-#             ignore_number = False
-#             sum += number
+# ignore 6 until 7
+def ignore_six_until_seven(list):
+    sum = 0
+    ignore_number = False
+    for i in range(len(list)):
+        if list[i] == 6:
+            ignore_number = True
+            continue
+        elif list[i] == 7:
+            ignore_number = False
+            continue
+        if not ignore_number:
+            sum += list[i]
+    return sum
+print(ignore_six_until_seven(numbers))
 
-# print(sum_without_six_untill_seven(numbers))
-
-            
-
+# numbers starting with a 6, then how about if there's a 61 in the list?
 
 
 # 5. HARD! Print the sum of the numbers. 
@@ -64,12 +63,12 @@ numbers = [1, 6, 2, 2, 7, 1, 6, 13, 99, 7]
 #    So [5, 13, 2] would have sum of 5. 
 
 
-def find_lucky_numbers(number):
-    lucky_number = []
-    i = 0
-    for i in range(len(number)):
-        if number[i] == 13:
+# def find_lucky_numbers(number):
+#     lucky_number = []
+#     i = 0
+#     for i in range(len(number)):
+#         if number[i] == 13:
             
-        else:
-            lucky_number.append(number[i])
-    return lucky_number
+#         else:
+#             lucky_number.append(number[i])
+#     return lucky_number
