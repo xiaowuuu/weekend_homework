@@ -20,12 +20,12 @@ numbers = [1, 6, 2, 2, 7, 1, 6, 13, 99, 7]
 #     for i in range(len(numbers) - 1):
 #         if numbers[i] == numbers[i + 1]:
 #             return True
-def find_two(list):
-    for i in range(len(list) - 1):
-        if list[i] == list[i + 1] and list[i] == 2:
-            return True
+# def find_two(list):
+#     for i in range(len(list) - 1):
+#         if list[i] == list[i + 1] and list[i] == 2:
+#             return True
 
-print(find_two(numbers))
+# print(find_two(numbers))
 
 
 
@@ -45,7 +45,9 @@ print(find_two(numbers))
         
 #         elif number == 7:
 #             ignore_number = True
+#             continue
 #         else:
+#             ignore_number = False
 #             sum += number
 
 # print(sum_without_six_untill_seven(numbers))
@@ -62,5 +64,12 @@ print(find_two(numbers))
 #    So [5, 13, 2] would have sum of 5. 
 
 
-
-
+def find_lucky_numbers(number):
+    lucky_number = []
+    i = 0
+    for i in range(len(number)):
+        if number[i] == 13:
+            
+        else:
+            lucky_number.append(number[i])
+    return lucky_number
