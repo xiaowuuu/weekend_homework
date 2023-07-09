@@ -66,12 +66,17 @@ numbers = [1, 6, 2, 2, 7, 1, 6, 13, 99, 7]
 #    So [5, 13, 2] would have sum of 5. 
 
 
-# def find_lucky_numbers(number):
-#     lucky_number = []
-#     i = 0
-#     for i in range(len(number)):
-#         if number[i] == 13:
-            
-#         else:
-#             lucky_number.append(number[i])
-#     return lucky_number
+def find_lucky_numbers(list):
+    sum_of_number = 0
+    unlucky_number = False
+    for i in range(len(list)):
+        if list[i] == 13:
+            unlucky_number = True
+        elif list[i] != 13:
+            if list[i - 1] == 13:
+                unlucky_number = True
+            else:
+                unlucky_number = False
+                sum_of_number += list[i]
+    return sum_of_number
+print(find_lucky_numbers(numbers))
