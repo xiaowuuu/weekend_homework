@@ -15,15 +15,18 @@ numbers = [1, 6, 2, 2, 7, 1, 6, 13, 99, 7]
 # print(difference_value)
 
 
+
 # 3. Print True if the list contains a 2 next to a 2 somewhere.
-# def find_same_number(numbers):
-#     for i in range(len(numbers) - 1):
-#         if numbers[i] == numbers[i + 1]:
-#             return True
 
 # def find_two(list):
 #     for i in range(len(list) - 1):
 #         if list[i] == list[i + 1] and list[i] == 2:
+#             return True
+
+# solution 2. works on any identical numbers
+# def find_same_number(numbers):
+#     for i in range(len(numbers) - 1):
+#         if numbers[i] == numbers[i + 1]:
 #             return True
 
 # print(find_two(numbers))
@@ -37,20 +40,20 @@ numbers = [1, 6, 2, 2, 7, 1, 6, 13, 99, 7]
 #    So [11, 6, 4, 99, 7, 11] would have sum of 22
 
 # ignore 6 until 7
-def ignore_six_until_seven(list):
-    sum = 0
-    ignore_number = False
-    for i in range(len(list)):
-        if list[i] == 6:
-            ignore_number = True
-            continue
-        elif list[i] == 7:
-            ignore_number = False
-            continue
-        if not ignore_number:
-            sum += list[i]
-    return sum
-print(ignore_six_until_seven(numbers))
+# def ignore_six_until_seven(list):
+#     sum = 0
+#     ignore_number = False
+#     for i in range(len(list)):
+#         if list[i] == 6:
+#             ignore_number = True
+#             continue
+#         elif list[i] == 7:
+#             ignore_number = False
+#             continue
+#         if not ignore_number:
+#             sum += list[i]
+#     return sum
+# print(ignore_six_until_seven(numbers))
 
 # numbers starting with a 6, then how about if there's a 61 in the list?
 
