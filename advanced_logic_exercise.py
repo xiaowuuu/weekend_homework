@@ -6,7 +6,7 @@ numbers = [1, 6, 2, 2, 7, 1, 6, 13, 99, 7]
 print("Question 1")
 def even_numbers(list):
     even_list = []
-    for even_integer in numbers:
+    for even_integer in list:
         if even_integer % 2 == 0:
             even_list.append(even_integer)
     return even_list
@@ -20,20 +20,24 @@ smallest_number = min(numbers)
 difference_value = largest_number - smallest_number
 print(difference_value)
 
+# numbers.sort()
+# difference= sorted_numbers[-1] - sorted_numbers[0]
+
 # 3. Print True if the list contains a 2 next to a 2 somewhere.
 print("Question 3")
-def find_two(list):
-    for i in range(len(list) - 1):
-        if list[i] == list[i + 1] and list[i] == 2:
-            return True
-
-# solution 2. works on any identical numbers
-# def find_same_number(numbers):
-#     for i in range(len(numbers) - 1):
-#         if numbers[i] == numbers[i + 1]:
+# def find_two(list):
+#     for i in range(len(list) - 1):
+#         if list[i] == list[i + 1] and list[i] == 2:
 #             return True
+result = False
+last_numebr = None
+for number in numbers:
+    if (number == 2 and last_numebr == 2):
+        result = True
+        break
+    last_numebr = number
+print(result)
 
-print(find_two(numbers))
 
 # 4. Print the sum of the numbers, 
 #    BUT ignore any section of numbers starting with a 6 and extending to the next 7.
@@ -56,6 +60,19 @@ def ignore_six_until_seven(list):
             sum += list[i]
     return sum
 print(ignore_six_until_seven(numbers))
+
+# solution from class
+# total = 0
+# found_6 = False
+# for number in numbers:
+#     if number == 6:
+#         found_6 == True
+#     elif found_6:
+#         if number == 7:
+#             found_6 = False
+#     else:
+#         total += number
+# print(total)
 
 # numbers starting with a 6, then how about if there's a 61 in the list?
 
@@ -82,3 +99,18 @@ def find_lucky_numbers(list):
                 sum_of_number += list[i]
     return sum_of_number
 print(find_lucky_numbers(numbers))
+# my solution will be incorrect if 13 at the end of the list
+
+# solution from class
+# index = 0
+# total = 0
+
+# previous_numebr = None
+# for numebr in numbers:
+#     if number == 13 or previous_numebr == 13:
+#         pass
+#     else:
+#         total += number
+#     previous_numebr = number
+
+# print(total)
